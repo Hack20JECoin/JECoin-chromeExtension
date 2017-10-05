@@ -9,5 +9,16 @@
     "default_popup": "popup.html"
   },
   "permissions": [
+      "https://github.com/*"
+  ],
+  "content_scripts": [
+      {
+          "matches": ["https://github.com/*/*/pull/*"],
+          "js": ["extension.js"],
+          "run_at": "document_start"
+      }
+  ],
+  "web_accessible_resources": [
+      "JECoin.html"
   ]
 }
