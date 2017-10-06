@@ -9,12 +9,15 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-      "https://github.com/*"
+      "https://github.com/*",
+      "https://*.ngrok.io/*",
+      "tabs"
   ],
   "content_scripts": [
       {
           "matches": ["https://github.com/*/*/pull/*"],
           "js": ["extension.js"],
+          "css": ["extension.css"],
           "run_at": "document_start"
       }
   ],
