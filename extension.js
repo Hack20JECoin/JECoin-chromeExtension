@@ -30,8 +30,14 @@ window.addEventListener('DOMContentLoaded', event => {
         const bountyAmountElement = document.querySelector('.current-bounty');
         const span = document.createElement('span');
 
-        span.innerText = `Current bounty amount: ${res.amount} JECoin`
+        // horrible shit
+        span.innerText = `Current bounty amount:`
+        const span2 = document.createElement('strong')
+        span2.innerText = `${res.amount} JECoin`;
+        const br = document.createElement('br')
         bountyAmountElement.appendChild(span);
+        bountyAmountElement.appendChild(br);
+        bountyAmountElement.appendChild(span2);
 
 
         qr.toCanvas({to: res.address, gas: 21000},
@@ -54,7 +60,7 @@ function setupButtonEventListener() {
 function unhideBountyAddress() {
 
     const hiddenClass = 'hidden'
-    
+
     document.getElementById('bountyAddress')
     .classList
     .remove(hiddenClass);
