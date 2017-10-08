@@ -1,3 +1,11 @@
-.current-bounty {
+.padded--bottom {
     padding-bottom: 10px;
+}
+
+.padded {
+    padding: 10px 0;
+}
+
+.hidden {
+    display: none !important;
 }
